@@ -1,11 +1,10 @@
 package hexlet.code;
-
 import java.util.Scanner;
 
 public class Cli {
     private Scanner scanner;
 
-    Cli(Scanner scanner){
+    Cli(Scanner scanner) {
         this.scanner = scanner;
     }
 

@@ -12,3 +12,7 @@ build:
 .PHONY: build-dist
 build-dist:
 	./gradlew installDist
+
+.PHONY: checkstyle
+checkstyle:
+	./gradlew checkstyleMain
