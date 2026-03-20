@@ -3,6 +3,7 @@ plugins {
     id("com.github.ben-manes.versions") version "0.53.0"
     application
     checkstyle
+    id "org.sonarqube" version "7.2.3.7755"
 }
 
 group = "hexlet.code"
@@ -20,6 +21,12 @@ dependencies {
 
 application { mainClass.set("hexlet.code.App") }
 
+sonar {
+    properties {
+        proper "sonar.projectKey", "Vetrash_java-project-61"
+        property "sonar.organization", "vetrash"
+    }
+}
 
 tasks.test {
     useJUnitPlatform()
