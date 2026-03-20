@@ -23,8 +23,8 @@ application { mainClass.set("hexlet.code.App") }
 
 sonar {
     properties {
-        proper "sonar.projectKey", "Vetrash_java-project-61"
-        property "sonar.organization", "vetrash"
+        property("sonar.projectKey", "Vetrash_java-project-61")
+        property("sonar.organization", "vetrash")
     }
 }
 
