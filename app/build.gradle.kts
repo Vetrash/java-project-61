@@ -1,6 +1,7 @@
 plugins {
-    id("java")
+//    id("java")
     id("com.github.ben-manes.versions") version "0.53.0"
+    application
 }
 
 group = "hexlet.code"
@@ -15,6 +16,8 @@ dependencies {
     testImplementation("org.junit.jupiter:junit-jupiter")
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }
+
+application { mainClass.set("hexlet.code.App") }
 
 
 tasks.test {
