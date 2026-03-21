@@ -1,6 +1,7 @@
 package hexlet.code.games;
 
 import hexlet.code.Cli;
+import hexlet.code.Random;
 import java.util.Scanner;
 
 public class Calc {
