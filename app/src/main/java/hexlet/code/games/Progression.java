@@ -23,7 +23,7 @@ public class Progression {
     }
 
     public static void start() {
-        String rules = "Find the greatest common divisor of given numbers.";
+        String rules = "What number is missing in the progression?";
         Engine.startGame(() -> round(), rules);
     }
 }
