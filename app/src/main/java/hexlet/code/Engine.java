@@ -19,7 +19,7 @@ public class Engine {
 
         System.out.println(rules); // Озвучивание правил игры
 
-        while (!isEndGame ) {
+        while (!isEndGame) {
             var data = round.get(); // Получаем вопрос и ответ на раунд
             var question = data[0];
             var correctAnswer = data[1];
@@ -30,18 +30,17 @@ public class Engine {
             if (correctAnswer.equals(answer)) {
                 System.out.println("Correct!");
                 wins += 1;
-                if(wins >= winForEndGame) {
+                if (wins >= winForEndGame) {
                     isEndGame = true;
-                };
+                }
             } else {
                 System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" + correctAnswer + "'");
                 System.out.println("Let's try again, " + nameUser + "!");
                 isEndGame = true;
             }
         }
-        if(wins >= winForEndGame) {
-        System.out.println("Congratulations, " + nameUser + "!");
-        };
-
+        if (wins >= winForEndGame) {
+            System.out.println("Congratulations, " + nameUser + "!");
+        }
     }
 }
