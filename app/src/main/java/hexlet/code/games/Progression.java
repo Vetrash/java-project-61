@@ -5,20 +5,21 @@ import hexlet.code.Random;
 
 
 public class Progression {
-    private static int startRangeProgression = 1;
-    private static int endRangeProgression = 50;
-    private static int startRangeLengthArray = 5;
-    private static int endRangeLengthArray = 10;
-    private static int startRangeStepProgression = 1;
-    private static int endRangeStepProgression = 50;
-    private static int startRangeEnigmaIndex = 0;
+
+    private static final int START_RANGE_STEP = 1;
+    private static final int END_RANGE_STEP = 50;
+    private static final int START_RANGE_PROGRESSION = 1;
+    private static final int END_RANGE_PROGRESSION = 50;
+    private static final int START_RANGE_LENGTH_ARRAY = 5;
+    private static final int END_RANGE_LENGTH_ARRAY = 10;
+    private static final int START_RANGE_ENIGMA_INDEX = 0;
 
     private static  String[] round() {
 
-        var startProgression = Random.getInRange(startRangeProgression, endRangeProgression);
-        var lengthArray = Random.getInRange(startRangeLengthArray, endRangeLengthArray);
-        var enigmaIndex = Random.getInRange(startRangeEnigmaIndex, lengthArray - 1);
-        var stepProgression = Random.getInRange(startRangeStepProgression, endRangeStepProgression);
+        var startProgression = Random.getInRange(START_RANGE_PROGRESSION, END_RANGE_PROGRESSION);
+        var lengthArray = Random.getInRange(START_RANGE_LENGTH_ARRAY, END_RANGE_LENGTH_ARRAY);
+        var enigmaIndex = Random.getInRange(START_RANGE_ENIGMA_INDEX, lengthArray - 1);
+        var stepProgression = Random.getInRange(START_RANGE_STEP, END_RANGE_STEP);
 
         var arrProgression  = new String[lengthArray];
         for (var i = 0; i < lengthArray; i++) {

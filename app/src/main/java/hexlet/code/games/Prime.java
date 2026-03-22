@@ -5,12 +5,12 @@ import hexlet.code.Random;
 
 public  class Prime {
 
-    private static int startRangeNum = 1;
-    private static int endRangeNum = 100;
+    private static final int START_RANGE_NUM = 1;
+    private static final int END_RANGE_NUM = 100;
 
     private static  String[] round() {
 
-        var num = Random.getInRange(startRangeNum, endRangeNum);
+        var num = Random.getInRange(START_RANGE_NUM, END_RANGE_NUM);
         var correctAnswer =  isPrime(num) ? "yes" : "no";
 
         String question = "Question: " + num;

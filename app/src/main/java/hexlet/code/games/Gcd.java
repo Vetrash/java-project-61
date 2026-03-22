@@ -5,8 +5,8 @@ import hexlet.code.Random;
 
 public class Gcd {
 
-    private static int startRangeNum = 1;
-    private static int endRangeNum = 100;
+    private static final int START_RANGE_NUM = 1;
+    private static final int END_RANGE_NUM = 100;
 
     private static int gcdCheck(int num1, int num2) {
         if (num2 == 0) {
@@ -17,8 +17,8 @@ public class Gcd {
 
     private static  String[] round() {
 
-        var num1 = Random.getInRange(startRangeNum, endRangeNum);
-        var num2 = Random.getInRange(startRangeNum, endRangeNum);
+        var num1 = Random.getInRange(START_RANGE_NUM, END_RANGE_NUM);
+        var num2 = Random.getInRange(START_RANGE_NUM, END_RANGE_NUM);
         var correctAnswer =  gcdCheck(num1, num2);
         String question = "Question: " + num1 + " " + num2;
         return new String[] {question, String.valueOf(correctAnswer)};

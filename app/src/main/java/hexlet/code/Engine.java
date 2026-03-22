@@ -4,7 +4,7 @@ import java.util.Scanner;
 import java.util.function.Supplier;
 
 public class Engine {
-    private  static int  winForEndGame = 3;
+    private  static final int  WIN_FOR_END_GAME = 3;
 
     public static  void startGame(Supplier<String[]> round, String rules) {
         var wins = 0;
@@ -30,7 +30,7 @@ public class Engine {
             if (correctAnswer.equals(answer)) {
                 System.out.println("Correct!");
                 wins += 1;
-                if (wins >= winForEndGame) {
+                if (wins >= WIN_FOR_END_GAME) {
                     isEndGame = true;
                 }
             } else {
@@ -39,7 +39,7 @@ public class Engine {
                 isEndGame = true;
             }
         }
-        if (wins >= winForEndGame) {
+        if (wins >= WIN_FOR_END_GAME) {
             System.out.println("Congratulations, " + nameUser + "!");
         }
     }

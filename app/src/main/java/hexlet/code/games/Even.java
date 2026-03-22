@@ -5,13 +5,13 @@ import hexlet.code.Engine;
 
 public class Even {
 
-    private static int startRangeNum = 1;
-    private static int endRangeNum = 100;
+    private static final int START_RANGE_NUM = 1;
+    private static final int END_RANGE_NUM = 100;
 
     private static  String[] round() {
 
 
-        var generateNum = Random.getInRange(startRangeNum, endRangeNum);
+        var generateNum = Random.getInRange(START_RANGE_NUM, END_RANGE_NUM);
         var isEven = generateNum % 2 == 0;
         var correctAnswer = isEven ? "yes" : "no";
 
