@@ -1,7 +1,10 @@
 package hexlet.code;
 
-import hexlet.code.games.*;
-import hexlet.code.Cli;
+import hexlet.code.games.Calc;
+import hexlet.code.games.Even;
+import hexlet.code.games.Gcd;
+import hexlet.code.games.Prime;
+import hexlet.code.games.Progression;
 import java.util.Scanner;
 
 
@@ -9,7 +12,6 @@ public class App {
 
     public static void main(String[] args) {
         var scanner = new Scanner(System.in);
-
 
         System.out.println("Please enter the game number and press Enter.");
         System.out.println("1 - Greet");
@@ -21,28 +23,30 @@ public class App {
         System.out.println("0 - Exit");
         String gameCode = scanner.next();
         System.out.println("Your choice: " + gameCode);
-        switch (gameCode){
+        switch (gameCode) {
             case "1":
                 Cli.greeting();
                 break;
             case "2":
-                Even.start(scanner);
+                Even.start();
                 break;
             case "3":
-                Calc.start(scanner);
+                Calc.start();
                 break;
             case "4":
-                Gcd.start(scanner);
+                Gcd.start();
                 break;
             case "5":
-                Progression.start(scanner);
+                Progression.start();
                 break;
             case "6":
-                Prime.start(scanner);
+                Prime.start();
                 break;
             case "0":
                 break;
+            default:
+                System.out.println("Unavailable functionality is selected");
+                break;
         }
-        scanner.close();
     }
 }
