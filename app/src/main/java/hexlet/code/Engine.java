@@ -4,9 +4,9 @@ import java.util.Scanner;
 import java.util.function.Supplier;
 
 public class Engine {
+    private  static int  winForEndGame = 3;
 
     public static  void startGame(Supplier<String[]> round, String rules) {
-        var winForEndGame = 3;
         var wins = 0;
         var isEndGame = false;
 

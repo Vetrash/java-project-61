@@ -5,6 +5,9 @@ import hexlet.code.Random;
 
 public class Gcd {
 
+    private static int startRangeNum = 1;
+    private static int endRangeNum = 100;
+
     private static int gcdCheck(int num1, int num2) {
         if (num2 == 0) {
             return num1;
@@ -13,8 +16,6 @@ public class Gcd {
     };
 
     private static  String[] round() {
-        var startRangeNum = 1;
-        var endRangeNum = 100;
 
         var num1 = Random.getInRange(startRangeNum, endRangeNum);
         var num2 = Random.getInRange(startRangeNum, endRangeNum);

@@ -5,34 +5,34 @@ import hexlet.code.Random;
 
 public class Calc {
 
-    private static  String[] round() {
-        var startRangeNum = 1;
-        var endRangeNum = 100;
+    private static int startRangeNum = 1;
+    private static int endRangeNum = 100;
+    private static int startRangeOpperand = 0;
+    private static int endRangeOpperand = 2;
 
-        var startRangeOpperand = 0;
-        var endRangeOpperand = 2;
+    private static  String[] round() {
 
         var num1 = Random.getInRange(startRangeNum, endRangeOpperand);
         var num2 = Random.getInRange(startRangeNum, endRangeOpperand);
-        var operandCode = Random.getInRange(startRangeOpperand, endRangeOpperand);
+        var operandCode =  String.valueOf(Random.getInRange(startRangeOpperand, endRangeOpperand));
 
         var operandString = "";
         var correctAnswer = 0;
 
         switch (operandCode) {
-            case 0:
+            case "0":
                 operandString = "+";
                 correctAnswer = num1 + num2;
                 break;
-            case 1:
+            case "1":
                 operandString = "-";
                 correctAnswer = num1 - num2;
                 break;
-            case 2:
+            case "2":
                 operandString = "*";
                 correctAnswer = num1 * num2;
                 break;
-            case 3:
+            case "3":
                 operandString = "/";
                 num1 = num2 * num1; //  для получения целого числа в ответе
                 correctAnswer = num1 / num2;

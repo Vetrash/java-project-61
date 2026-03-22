@@ -5,16 +5,15 @@ import hexlet.code.Random;
 
 
 public class Progression {
+    private static int startRangeProgression = 1;
+    private static int endRangeProgression = 50;
+    private static int startRangeLengthArray = 5;
+    private static int endRangeLengthArray = 10;
+    private static int startRangeStepProgression = 1;
+    private static int endRangeStepProgression = 50;
+    private static int startRangeEnigmaIndex = 0;
 
     private static  String[] round() {
-        var startRangeProgression = 1;
-        var endRangeProgression = 50;
-        var startRangeLengthArray = 5;
-        var endRangeLengthArray = 10;
-        var startRangeStepProgression = 1;
-        var endRangeStepProgression = 50;
-        var startRangeEnigmaIndex = 0;
-
 
         var startProgression = Random.getInRange(startRangeProgression, endRangeProgression);
         var lengthArray = Random.getInRange(startRangeLengthArray, endRangeLengthArray);
