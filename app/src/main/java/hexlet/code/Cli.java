@@ -5,6 +5,7 @@ public class Cli {
 
     public  static void greeting() {
         System.out.println("Welcome to the Brain Games!");
+        acquaintance();
     }
 
     public static String acquaintance() {
