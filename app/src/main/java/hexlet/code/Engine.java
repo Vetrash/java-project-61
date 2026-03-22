@@ -6,7 +6,7 @@ import java.util.function.Supplier;
 public class Engine {
 
     public static  void startGame(Supplier<String[]> round, String rules) {
-        int winForEndGame = 3;
+        var winForEndGame = 3;
         var wins = 0;
         var isEndGame = false;
 

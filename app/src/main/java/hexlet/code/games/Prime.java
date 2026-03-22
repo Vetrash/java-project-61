@@ -6,7 +6,10 @@ import hexlet.code.Random;
 public  class Prime {
 
     private static  String[] round() {
-        var num = Random.getInRange(1, 100);
+        var startRangeNum = 1;
+        var endRangeNum = 100;
+
+        var num = Random.getInRange(startRangeNum, endRangeNum);
         var correctAnswer =  isPrime(num) ? "yes" : "no";
 
         String question = "Question: " + num;

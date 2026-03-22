@@ -6,7 +6,10 @@ import hexlet.code.Engine;
 public class Even {
 
     private static  String[] round() {
-        var generateNum = Random.getInRange(0, 100);
+        var startRangeNum = 1;
+        var endRangeNum = 100;
+
+        var generateNum = Random.getInRange(startRangeNum, endRangeNum);
         var isEven = generateNum % 2 == 0;
         var correctAnswer = isEven ? "yes" : "no";
 

@@ -6,9 +6,15 @@ import hexlet.code.Random;
 public class Calc {
 
     private static  String[] round() {
-        var num1 = Random.getInRange(0, 100);
-        var num2 = Random.getInRange(1, 100);
-        var operandCode = Random.getInRange(0, 2);
+        var startRangeNum = 1;
+        var endRangeNum = 100;
+
+        var startRangeOpperand = 0;
+        var endRangeOpperand = 2;
+
+        var num1 = Random.getInRange(startRangeNum, endRangeOpperand);
+        var num2 = Random.getInRange(startRangeNum, endRangeOpperand);
+        var operandCode = Random.getInRange(startRangeOpperand, endRangeOpperand);
 
         var operandString = "";
         var correctAnswer = 0;

@@ -7,10 +7,20 @@ import hexlet.code.Random;
 public class Progression {
 
     private static  String[] round() {
-        var startProgression = Random.getInRange(1, 50);
-        var lengthArray = Random.getInRange(5, 10);
-        var enigmaIndex = Random.getInRange(0, lengthArray - 1);
-        var stepProgression = Random.getInRange(1, 50);
+        var startRangeProgression = 1;
+        var endRangeProgression = 50;
+        var startRangeLengthArray = 5;
+        var endRangeLengthArray = 10;
+        var startRangeStepProgression = 1;
+        var endRangeStepProgression = 50;
+        var startRangeEnigmaIndex = 0;
+
+
+        var startProgression = Random.getInRange(startRangeProgression, endRangeProgression);
+        var lengthArray = Random.getInRange(startRangeLengthArray, endRangeLengthArray);
+        var enigmaIndex = Random.getInRange(startRangeEnigmaIndex, lengthArray - 1);
+        var stepProgression = Random.getInRange(startRangeStepProgression, endRangeStepProgression);
+
         var arrProgression  = new String[lengthArray];
         for (var i = 0; i < lengthArray; i++) {
             arrProgression[i] = String.valueOf(startProgression + stepProgression * (i + 1));

@@ -13,8 +13,11 @@ public class Gcd {
     };
 
     private static  String[] round() {
-        var num1 = Random.getInRange(0, 100);
-        var num2 = Random.getInRange(0, 100);
+        var startRangeNum = 1;
+        var endRangeNum = 100;
+
+        var num1 = Random.getInRange(startRangeNum, endRangeNum);
+        var num2 = Random.getInRange(startRangeNum, endRangeNum);
         var correctAnswer =  gcdCheck(num1, num2);
         String question = "Question: " + num1 + " " + num2;
         return new String[] {question, String.valueOf(correctAnswer)};
