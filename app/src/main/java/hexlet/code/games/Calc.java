@@ -8,7 +8,7 @@ public class Calc {
     private static  String[] round() {
         var num1 = Random.getInRange(0, 100);
         var num2 = Random.getInRange(1, 100);
-        var operandCode = Random.getInRange(0, 3);
+        var operandCode = Random.getInRange(0, 2);
 
         var operandString = "";
         var correctAnswer = 0;
@@ -23,13 +23,13 @@ public class Calc {
                 correctAnswer = num1 - num2;
                 break;
             case 2:
+                operandString = "*";
+                correctAnswer = num1 * num2;
+                break;
+            case 3:
                 operandString = "/";
                 num1 = num2 * num1; //  для получения целого числа в ответе
                 correctAnswer = num1 / num2;
-                break;
-            case 3:
-                operandString = "*";
-                correctAnswer = num1 * num2;
                 break;
             default:
                 operandString = "+";
