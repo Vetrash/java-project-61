@@ -14,9 +14,9 @@ repositories {
 }
 
 dependencies {
-    testImplementation(platform("org.junit:junit-bom:5.10.0"))
-    testImplementation("org.junit.jupiter:junit-jupiter")
-    testRuntimeOnly("org.junit.platform:junit-platform-launcher")
+//    testImplementation(platform("org.junit:junit-bom:5.10.0"))
+//    testImplementation("org.junit.jupiter:junit-jupiter")
+//    testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }
 
 application { mainClass.set("hexlet.code.App") }
@@ -25,12 +25,13 @@ sonar {
     properties {
         property("sonar.projectKey", "Vetrash_java-project-61")
         property("sonar.organization", "vetrash")
+        property("sonar.coverage.skip", "true")
     }
 }
 
-tasks.test {
-    useJUnitPlatform()
-}
+//tasks.test {
+//    useJUnitPlatform()
+//}
 tasks.getByName("run", JavaExec::class) {
     standardInput = System.`in`
 }

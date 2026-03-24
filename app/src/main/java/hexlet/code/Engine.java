@@ -24,7 +24,7 @@ public class Engine {
             var question = data[0];
             var correctAnswer = data[1];
 
-            System.out.println(question);
+            System.out.println("Question: " + question);
             String answer = scanner.next();
             System.out.println("Your answer: " + answer);
             if (correctAnswer.equals(answer)) {

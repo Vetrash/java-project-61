@@ -45,7 +45,7 @@ public class App {
             case "0":
                 break;
             default:
-                System.out.println("Unavailable functionality is selected");
+                System.out.println("Unavailable functionality is selected" + gameCode);
                 break;
         }
     }

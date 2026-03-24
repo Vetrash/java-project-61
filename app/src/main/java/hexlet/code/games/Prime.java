@@ -13,7 +13,7 @@ public  class Prime {
         var num = Random.getInRange(START_RANGE_NUM, END_RANGE_NUM);
         var correctAnswer =  isPrime(num) ? "yes" : "no";
 
-        String question = "Question: " + num;
+        String question = String.valueOf(num);
         return new String[] {question, String.valueOf(correctAnswer)};
     }
 

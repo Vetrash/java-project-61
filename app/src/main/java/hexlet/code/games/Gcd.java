@@ -20,7 +20,7 @@ public class Gcd {
         var num1 = Random.getInRange(START_RANGE_NUM, END_RANGE_NUM);
         var num2 = Random.getInRange(START_RANGE_NUM, END_RANGE_NUM);
         var correctAnswer =  gcdCheck(num1, num2);
-        String question = "Question: " + num1 + " " + num2;
+        String question = num1 + " " + num2;
         return new String[] {question, String.valueOf(correctAnswer)};
     }
 

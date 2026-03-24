@@ -38,11 +38,9 @@ public class Calc {
                 correctAnswer = num1 / num2;
                 break;
             default:
-                operandString = "+";
-                correctAnswer = num1 + num2;
-                break;
+                throw new RuntimeException("Unknown operator " + operandCode);
         }
-        String question = "Question: " + num1 + " " + operandString + " " + num2;
+        String question = num1 + " " + operandString + " " + num2;
         return new String[] {question, String.valueOf(correctAnswer)};
     }
 

@@ -15,7 +15,7 @@ public class Even {
         var isEven = generateNum % 2 == 0;
         var correctAnswer = isEven ? "yes" : "no";
 
-        String question = "Question: " + generateNum;
+        String question =  String.valueOf(generateNum);
         return new String[] {question, String.valueOf(correctAnswer)};
     }
 
