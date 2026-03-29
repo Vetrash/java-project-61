@@ -36,7 +36,7 @@ public class Calc {
                 return   num1 * num2;
             case "3":
                 var numerator = num2 * num1; //  для получения целого числа в ответе
-                return nnumerator / num2;
+                return numerator / num2;
             default:
                 throw new RuntimeException("Unknown operator " + operandCode);
         }
