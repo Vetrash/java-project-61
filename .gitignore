@@ -27,3 +27,4 @@ replay_pid*
 app/build/
 app/build/*
 app/build/**/*
+app/.gradle
